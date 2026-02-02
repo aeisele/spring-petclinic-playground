@@ -1,0 +1,38 @@
+custom:
+  config:
+    str-list:
+      - p11
+      - p12
+      - p13
+    map:
+      k1: v1
+      k2: v2
+    map-list:
+      k1:
+        - str1
+        - str2
+      k2:
+        - str3
+        - str4
+    map-pojo:
+      p1:
+        my-value: "value 1"
+        my-map:
+          k1: "v1"
+          k2: "v2"
+      p2:
+        my-value: "value 2"
+        my-map:
+          k3: "v3"
+          k4: "v4"
+    my-enum-map-list:
+      const1:
+        - str1
+        - str2
+      const2:
+        - str3
+        - str4
+      const3:
+        - str5
+        - str6
+        - str999999

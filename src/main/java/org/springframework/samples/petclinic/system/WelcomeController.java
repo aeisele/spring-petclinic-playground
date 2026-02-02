@@ -16,11 +16,21 @@
 
 package org.springframework.samples.petclinic.system;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 class WelcomeController {
+
+	private final Environment environment;
+	private final ApplicationContext contxt;
+
+	WelcomeController(Environment environment, ApplicationContext contxt) {
+		this.environment = environment;
+		this.contxt = contxt;
+	}
 
 	@GetMapping("/")
 	public String welcome() {
