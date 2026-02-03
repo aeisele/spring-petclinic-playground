@@ -1,0 +1,38 @@
+custom:
+  config:
+    str-list:
+      - override-p11
+      - override-p12
+      - override-p13
+    map:
+      k1: override-v1
+      k2: override-v2
+    map-list:
+      k1:
+        - override-str1
+        - override-str2
+      k2:
+        - override-str3
+        - override-str4
+    map-pojo:
+      p1:
+        my-value: "override-value 1"
+        my-map:
+          k1: "override-v1"
+          k2: "override-v2"
+      p2:
+        my-value: "override-value 2"
+        my-map:
+          k3: "override-v3"
+          k4: "override-v4"
+    my-enum-map-list:
+      const1:
+        - override-str1
+        - override-str2
+      const2:
+        - override-str3
+        - override-str4
+      const3:
+        - override-str5
+        - override-str6
+        - override-str999999
