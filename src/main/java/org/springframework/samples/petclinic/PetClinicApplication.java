@@ -34,6 +34,7 @@ import org.springframework.samples.petclinic.model.MyProps;
 public class PetClinicApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("spring.config.name", "petclinic");
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
 
