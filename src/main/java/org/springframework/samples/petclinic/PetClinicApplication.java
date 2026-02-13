@@ -21,13 +21,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.samples.petclinic.config.CustomConfig;
+import org.springframework.samples.petclinic.model.MyProps;
 
 /**
  * PetClinic Spring Boot Application.
  *
  * @author Dave Syer
  */
-@EnableConfigurationProperties(CustomConfig.class)
+@EnableConfigurationProperties({CustomConfig.class, MyProps.class})
 @SpringBootApplication
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
 public class PetClinicApplication {
