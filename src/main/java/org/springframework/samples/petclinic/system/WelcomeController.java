@@ -26,10 +26,14 @@ class WelcomeController {
 
 	private final Environment environment;
 	private final ApplicationContext contxt;
+	private final MyComponent myComponent;
 
-	WelcomeController(Environment environment, ApplicationContext contxt) {
+	WelcomeController(Environment environment,
+					  ApplicationContext contxt,
+					  MyComponent myComponent) {
 		this.environment = environment;
 		this.contxt = contxt;
+		this.myComponent = myComponent;
 	}
 
 	@GetMapping("/")
