@@ -16,6 +16,7 @@
 
 package org.springframework.samples.petclinic.system;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
@@ -27,13 +28,16 @@ class WelcomeController {
 	private final Environment environment;
 	private final ApplicationContext contxt;
 	private final MyComponent myComponent;
+	private final int myValue;
 
 	WelcomeController(Environment environment,
-					  ApplicationContext contxt,
-					  MyComponent myComponent) {
+	                  ApplicationContext contxt,
+	                  MyComponent myComponent,
+					  @Value("${myValue}") int myValue) {
 		this.environment = environment;
 		this.contxt = contxt;
 		this.myComponent = myComponent;
+		this.myValue = myValue;
 	}
 
 	@GetMapping("/")

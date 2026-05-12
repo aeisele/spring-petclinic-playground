@@ -25,4 +25,24 @@ public class CustomConfig {
 		this.mapPojo = mapPojo;
 		this.myEnumMapList = myEnumMapList;
 	}
+
+	public List<String> getStrList() {
+		return strList;
+	}
+
+	public Map<String, String> getMap() {
+		return map;
+	}
+
+	public Map<String, List<String>> getMapList() {
+		return mapList;
+	}
+
+	public Map<String, MyCustomPropertyType> getMapPojo() {
+		return mapPojo;
+	}
+
+	public Map<MyEnumKey, List<String>> getMyEnumMapList() {
+		return myEnumMapList;
+	}
 }
