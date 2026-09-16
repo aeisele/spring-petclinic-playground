@@ -16,6 +16,9 @@
 
 package org.springframework.samples.petclinic.system;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
@@ -29,15 +32,19 @@ class WelcomeController {
 	private final ApplicationContext contxt;
 	private final MyComponent myComponent;
 	private final int myValue;
+	@PersistenceContext
+	private final EntityManager entityManager;
 
 	WelcomeController(Environment environment,
-	                  ApplicationContext contxt,
-	                  MyComponent myComponent,
-					  @Value("${myValue}") int myValue) {
+					  ApplicationContext contxt,
+					  MyComponent myComponent,
+					  @Value("${myValue}") int myValue,
+					  EntityManager entityManager) {
 		this.environment = environment;
 		this.contxt = contxt;
 		this.myComponent = myComponent;
 		this.myValue = myValue;
+		this.entityManager = entityManager;
 	}
 
 	@GetMapping("/")
